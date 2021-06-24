@@ -13,3 +13,12 @@ class _CheckState extends State<Check> {
     return Container();
   }
 }
+
+class AnotherCheck extends StatelessWidget {
+  const AnotherCheck({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
