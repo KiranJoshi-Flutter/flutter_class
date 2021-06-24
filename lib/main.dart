@@ -10,167 +10,80 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Containers',
-      home: Scaffold(
-        // backgroundColor: Colors.red,
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 10.0,
+      home: Container(
+        alignment: Alignment.center,
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          height: 100.0,
+          width: double.infinity,
+          color: Colors.white,
+          child: Row(
+            children: [
+              Container(
+                margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+                height: 70.0,
+                width: 70.0,
+                color: Colors.blue,
+                child: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                  size: 44.0,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              ),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      alignment: Alignment.center,
-                      height: 50.0,
-                      width: 100.0,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF6BEFAD),
-                        borderRadius: BorderRadius.circular(16.0),
-                        border: Border.all(
-                          color: Colors.black,
-                        ),
+                    Text(
+                      'Kiran Joshi',
+                      style: TextStyle(
+                        color: Colors.black,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22.0,
                       ),
-                      child: Text(
-                        'Press here',
-                        style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          decoration: TextDecoration.none,
-                        ),
+                    ),
+                    Text(
+                      'Software Engineer',
+                      style: TextStyle(
+                        color: Colors.black,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 12.0,
                       ),
                     ),
                     Container(
-                      height: 50.0,
-                      width: 100.0,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF6BEFAD),
-                        borderRadius: BorderRadius.circular(16.0),
-                        border: Border.all(
-                          color: Colors.black,
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                      child: Row(
+                        children: [
+                          Icon(Icons.location_city_outlined),
+                          Text(
+                            'Kathmandu, Nepal',
+                            style: TextStyle(
+                              color: Colors.black,
+                              decoration: TextDecoration.none,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 12.0,
+                            ),
                           ),
                         ],
-                      ),
-                      child: Text(
-                        'Press here',
-                        style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          decoration: TextDecoration.none,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: 50.0,
-                      width: 100.0,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF6BEFAD),
-                        borderRadius: BorderRadius.circular(16.0),
-                        border: Border.all(
-                          color: Colors.black,
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
-                        gradient: LinearGradient(
-                          begin: Alignment.topRight,
-                          end: Alignment.bottomLeft,
-                          colors: [
-                            Colors.blue,
-                            Colors.red,
-                          ],
-                        ),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Press here',
-                          style: TextStyle(
-                            fontWeight: FontWeight.normal,
-                            decoration: TextDecoration.none,
-                          ),
-                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10.0,
+              ),
+              SizedBox(width: 60.0),
+              Container(
+                height: 70.0,
+                width: 70.0,
+                color: Colors.blue,
+                child: Icon(
+                  Icons.add,
+                  color: Colors.white,
+                  size: 34.0,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      height: 50.0,
-                      width: 100.0,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF6BEFAD),
-                        borderRadius: BorderRadius.circular(16.0),
-                        border: Border.all(
-                          color: Colors.black,
-                        ),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Press here',
-                          style: TextStyle(
-                            fontWeight: FontWeight.normal,
-                            decoration: TextDecoration.none,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      height: 50.0,
-                      width: 100.0,
-                      // foregroundDecoration: ,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF6BEFAD),
-                        borderRadius: BorderRadius.circular(16.0),
-                        border: Border.all(
-                          color: Colors.black,
-                        ),
-                      ),
-                      child: FlutterLogo(),
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      height: 50.0,
-                      width: 100.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16.0),
-                        border: Border.all(
-                          color: Colors.black,
-                        ),
-                        color: Colors.purple,
-                        gradient: LinearGradient(
-                            colors: [Colors.red, Colors.cyan],
-                            begin: Alignment.centerRight,
-                            end: Alignment(0.8, 0.0),
-                            tileMode: TileMode.mirror),
-                      ),
-                      child: FlutterLogo(),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
