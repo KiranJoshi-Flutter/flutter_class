@@ -10,6 +10,8 @@ class Check3 extends StatefulWidget {
 class _Check3State extends State<Check3> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('hello'),
+    );
   }
 }
