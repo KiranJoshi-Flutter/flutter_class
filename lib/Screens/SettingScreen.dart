@@ -36,50 +36,50 @@ class _SettingScreenState extends State<SettingScreen> {
         child: hide == true
             ? Container()
             : Stack(
-          children: [
-            Container(
-              height: 200.0,
-              width: 200.0,
-              color: Colors.purple,
-            ),
-            Positioned(
-              top: 0,
-              left: 0,
-              child: Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.red,
+                children: [
+                  Container(
+                    height: 200.0,
+                    width: 200.0,
+                    color: Colors.purple,
+                  ),
+                  Positioned(
+                    top: 0,
+                    left: 0,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.red,
+                    ),
+                  ),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    left: 0,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.yellow,
+                    ),
+                  ),
+                ],
               ),
-            ),
-            Positioned(
-              top: 0,
-              right: 0,
-              child: Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.green,
-              ),
-            ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              child: Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.blue,
-              ),
-            ),
-            Positioned(
-              bottom: 0,
-              right: 0,
-              child: Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.yellow,
-              ),
-            ),
-          ],
-        ),
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -95,7 +95,7 @@ class _SettingScreenState extends State<SettingScreen> {
           FloatingActionButton(
             onPressed: _hideCounter,
             child:
-            Icon(hide == false ? Icons.visibility : Icons.visibility_off),
+                Icon(hide == false ? Icons.visibility : Icons.visibility_off),
           ),
         ],
       ),

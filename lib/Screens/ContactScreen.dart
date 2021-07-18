@@ -1,8 +1,7 @@
-import 'package:containers/Screens/ContactScreen.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key key}) : super(key: key);
+class ContactScreen extends StatelessWidget {
+  const ContactScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,16 +12,11 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('HOME SCREEN'),
+            Text('CONTACT SCREEN'),
             ElevatedButton(
-              child: Text('GO TO CONTACT'),
+              child: Text('Go to Home'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ContactScreen(),
-                  ),
-                );
+                Navigator.pop(context);
               },
             ),
           ],
