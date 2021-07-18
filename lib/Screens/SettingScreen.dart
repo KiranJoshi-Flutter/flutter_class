@@ -35,17 +35,50 @@ class _SettingScreenState extends State<SettingScreen> {
       body: Center(
         child: hide == true
             ? Container()
-            : Container(
-          height: 100.0,
-          width: 100.0,
-          color: Colors.purple,
-          alignment: Alignment.center,
-          child: Text(
-            _counter.toString(),
-            style: TextStyle(
-              fontSize: 20.0,
+            : Stack(
+          children: [
+            Container(
+              height: 200.0,
+              width: 200.0,
+              color: Colors.purple,
             ),
-          ),
+            Positioned(
+              top: 0,
+              left: 0,
+              child: Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.red,
+              ),
+            ),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.green,
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              child: Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.blue,
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.yellow,
+              ),
+            ),
+          ],
         ),
       ),
       floatingActionButton: Row(
