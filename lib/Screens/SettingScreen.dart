@@ -8,22 +8,22 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-  int count = 0;
+  int _counter = 0;
   bool hide = false;
 
-  void incrementCount() {
+  void _incrementCounter() {
     setState(() {
-      count++;
+      _counter++;
     });
   }
 
-  void decrementCount() {
+  void _decrementCounter() {
     setState(() {
-      count--;
+      _counter--;
     });
   }
 
-  void hideCounter() {
+  void _hideCounter() {
     setState(() {
       hide = !hide;
     });
@@ -36,33 +36,33 @@ class _SettingScreenState extends State<SettingScreen> {
         child: hide == true
             ? Container()
             : Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.purple,
-                alignment: Alignment.center,
-                child: Text(
-                  count.toString(),
-                  style: TextStyle(
-                    fontSize: 20.0,
-                  ),
-                ),
-              ),
+          height: 100.0,
+          width: 100.0,
+          color: Colors.purple,
+          alignment: Alignment.center,
+          child: Text(
+            _counter.toString(),
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
+          ),
+        ),
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: incrementCount,
+            onPressed: hide == true ? () => {} : _incrementCounter,
             child: Icon(Icons.add),
           ),
           FloatingActionButton(
-            onPressed: decrementCount,
+            onPressed: hide == true ? () => {} : _decrementCounter,
             child: Icon(Icons.remove),
           ),
           FloatingActionButton(
-            onPressed: hideCounter,
+            onPressed: _hideCounter,
             child:
-                Icon(hide == false ? Icons.visibility : Icons.visibility_off),
+            Icon(hide == false ? Icons.visibility : Icons.visibility_off),
           ),
         ],
       ),
