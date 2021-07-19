@@ -8,6 +8,41 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SafeArea(
+        child: Drawer(
+          child: Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    Routes.home,
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.contact_phone),
+                title: Text('Contact'),
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    Routes.contact,
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Services'),
+              ),
+            ],
+          ),
+        ),
+      ),
+      appBar: AppBar(
+        title: Text('Home'),
+      ),
       body: Container(
         width: double.infinity,
         child: Column(
