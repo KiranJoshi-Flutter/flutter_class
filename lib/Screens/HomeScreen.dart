@@ -1,4 +1,5 @@
 import 'package:containers/Screens/ContactScreen.dart';
+import 'package:containers/constants/routes.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,11 +18,9 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(
               child: Text('GO TO CONTACT'),
               onPressed: () {
-                Navigator.push(
+                Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => ContactScreen(),
-                  ),
+                  Routes.contact,
                 );
               },
             ),
